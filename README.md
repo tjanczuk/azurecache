@@ -57,7 +57,7 @@ You can specify the credentials to the Windows Azure Cache Service either in cod
 var azureCacheOptions = {
     identifier: '<your_endpoint_url>', // or set the AZURE_CACHE_IDENTIFIER environment variable
     token: '<your_access_key>', // or set the AZURE_CACHE_TOKEN environment variable
-    ttl: 3600 // optional TTL in seconds (default 1 day); you can also set the AZURE_CACHE_TTL environment variable
+    ttl: 3600 // optional TTL in seconds (default 1 day); or set the AZURE_CACHE_TTL env variable
 };
 
 // ...
@@ -75,7 +75,7 @@ var azurecache = require('azurecache')
 var cache = azurecache.create({
     identifier: '<your_endpoint_url>', // or set the AZURE_CACHE_IDENTIFIER environment variable
     token: '<your_access_key>', // or set the AZURE_CACHE_TOKEN environment variable
-    ttl: 3600 // optional TTL in seconds (default 1 day); you can also set the AZURE_CACHE_TTL environment variable
+    ttl: 3600 // optional TTL in seconds (default 1 day); or set the AZURE_CACHE_TTL env variable
 });
 
 cache.put('test1', { first: 'Tomasz', last: 'Janczuk' }, function (error) {
@@ -89,7 +89,7 @@ cache.put('test1', { first: 'Tomasz', last: 'Janczuk' }, function (error) {
 
 ### How
 
-The *azurecache* module uses [Edge.js](http://tjanczuk.github.io/edge) to access the .NET client of the Windows Azure Cache Service that ships as a NuGet package. 
+The *azurecache* module uses [Edge.js](http://tjanczuk.github.io/edge) to access the .NET client of the Windows Azure Cache Service that ships as a NuGet package. The gist of the idea is [here](https://github.com/tjanczuk/azurecache/blob/master/lib/azurecache.js).
 
 ### More
 

@@ -42,8 +42,8 @@ app.listen(process.env.PORT || 3000);
 Lastly set some environment variables and start your server:
 
 ```
-set AZURE_CACHE_IDENTIFIER=&lt;your_azure_cache_endpoint_url&gt;
-set AZURE_CACHE_TOKEN=&lt;your_azure_cache_access_key&gt;
+set AZURE_CACHE_IDENTIFIER=<your_azure_cache_endpoint_url>
+set AZURE_CACHE_TOKEN=<your_azure_cache_access_key>
 node server.js
 ```
 
@@ -55,8 +55,8 @@ You can specify the credentials to the Windows Azure Cache Service either in cod
 
 ```javascript
 var azureCacheOptions = {
-    identifier: '&lt;your_endpoint_url&gt;', // or set the AZURE_CACHE_IDENTIFIER environment variable
-    token: '&lt;your_access_key&gt;', // or set the AZURE_CACHE_TOKEN environment variable
+    identifier: '<your_endpoint_url>', // or set the AZURE_CACHE_IDENTIFIER environment variable
+    token: '<your_access_key>', // or set the AZURE_CACHE_TOKEN environment variable
     ttl: 3600 // optional TTL in seconds (default 1 day); you can also set the AZURE_CACHE_TTL environment variable
 };
 
@@ -73,8 +73,8 @@ You can access Windows Azure Cache Service directly too:
 var azurecache = require('azurecache')
 
 var cache = azurecache.create({
-    identifier: '&lt;your_endpoint_url&gt;', // or set the AZURE_CACHE_IDENTIFIER environment variable
-    token: '&lt;your_access_key&gt;', // or set the AZURE_CACHE_TOKEN environment variable
+    identifier: '<your_endpoint_url>', // or set the AZURE_CACHE_IDENTIFIER environment variable
+    token: '<your_access_key>', // or set the AZURE_CACHE_TOKEN environment variable
     ttl: 3600 // optional TTL in seconds (default 1 day); you can also set the AZURE_CACHE_TTL environment variable
 });
 

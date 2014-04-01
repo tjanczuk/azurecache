@@ -75,7 +75,7 @@ var azurecache = require('azurecache')
 var cache = azurecache.create({
     identifier: '<your_endpoint_url>', // or set the AZURE_CACHE_IDENTIFIER environment variable
     token: '<your_access_key>', // or set the AZURE_CACHE_TOKEN environment variable
-    ttl: 3600 // optional TTL in seconds (default 1 day); or set the AZURE_CACHE_TTL env variable
+    ttl: 3600 // optional TTL in seconds (default 1 day); or set the AZURE_CACHE_TTL_SECONDS env variable
 });
 
 cache.put('test1', { first: 'Tomasz', last: 'Janczuk' }, function (error) {
